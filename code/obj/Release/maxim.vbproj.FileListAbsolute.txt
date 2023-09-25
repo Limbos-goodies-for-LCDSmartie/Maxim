@@ -1,0 +1,5 @@
+M:\Files\VB Storehouse\VB7\RELEASED\maxim\maxim\bin\maxim.dll
+M:\Files\VB Storehouse\VB7\RELEASED\maxim\maxim\bin\maxim.xml
+M:\Files\VB Storehouse\VB7\RELEASED\maxim\maxim\obj\Release\ResolveAssemblyReference.cache
+M:\Files\VB Storehouse\VB7\RELEASED\maxim\maxim\obj\Release\maxim.dll
+M:\Files\VB Storehouse\VB7\RELEASED\maxim\maxim\obj\Release\maxim.xml

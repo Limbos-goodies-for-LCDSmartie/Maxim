@@ -1,0 +1,8 @@
+E:\Nextcloud\Development\LCD Smartie Plugins\maxim\maxim\obj\x64\Debug\maxim.vbproj.AssemblyReference.cache
+E:\Nextcloud\Development\LCD Smartie Plugins\maxim\maxim\obj\x64\Debug\maxim.vbproj.CoreCompileInputs.cache
+E:\Nextcloud\Development\LCD Smartie Plugins\maxim\maxim\bin\x64\Debug\maxim.dll
+E:\Nextcloud\Development\LCD Smartie Plugins\maxim\maxim\bin\x64\Debug\maxim.pdb
+E:\Nextcloud\Development\LCD Smartie Plugins\maxim\maxim\bin\x64\Debug\maxim.xml
+E:\Nextcloud\Development\LCD Smartie Plugins\maxim\maxim\obj\x64\Debug\maxim.dll
+E:\Nextcloud\Development\LCD Smartie Plugins\maxim\maxim\obj\x64\Debug\maxim.xml
+E:\Nextcloud\Development\LCD Smartie Plugins\maxim\maxim\obj\x64\Debug\maxim.pdb
