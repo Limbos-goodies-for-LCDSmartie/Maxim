@@ -20,27 +20,33 @@ Public Class LCDSmartie
 
 Reloop1:
             If File.Exists(sPath) Then
-                If Out < 101 Then
-                    Out = Out + 1
-                Else
-                    Out = 1
-                End If
+                Try
 
-                sValue = INIRead(sPath, param1, Out, "NoLine")
-                If sValue = "NoLine" Then
-                    NumberOfErrors = NumberOfErrors + 1
-                    If NumberOfErrors < 3 Then
-                        GoTo Reloop1
 
-                        NumberOfErrors = 0
-                        Return ""
-                        Exit Function
+                    If Out < 101 Then
+                        Out = Out + 1
+                    Else
+                        Out = 1
                     End If
 
-                Else
-                    Return sValue
-                    NumberOfErrors = 0
-                End If
+                    sValue = INIRead(sPath, param1, Out, "NoLine")
+                    If sValue = "NoLine" Then
+                        NumberOfErrors = NumberOfErrors + 1
+                        If NumberOfErrors < 3 Then
+                            GoTo Reloop1
+
+                            NumberOfErrors = 0
+                            Return ""
+                            Exit Function
+                        End If
+
+                    Else
+                        Return sValue
+                        NumberOfErrors = 0
+                    End If
+                Catch ex As Exception
+                    Return ""
+                End Try
             Else
                 Return "lines.ini is missing"
                 NumberOfErrors = 0
@@ -66,27 +72,36 @@ Reloop1:
             '         SaveSetting("q", "settings", "linespath", param2)
 
 Reloop2:
-            If File.Exists(sPath) Then
-                Randomize()
-                Out = CInt(Int((100 * Rnd()) + 1))
-                sValue = INIRead(sPath, param1, Out, "NoLine")
 
-                If sValue = "NoLine" Then
-                    NumberOfErrors = NumberOfErrors + 1
-                    If NumberOfErrors < 3 Then
-                        GoTo Reloop2
+            If File.Exists(sPath) Then
+                Try
+
+
+                    Randomize()
+                    Out = CInt(Int((100 * Rnd()) + 1))
+                    sValue = INIRead(sPath, param1, Out, "NoLine")
+
+                    If sValue = "NoLine" Then
+                        NumberOfErrors = NumberOfErrors + 1
+                        If NumberOfErrors < 3 Then
+                            GoTo Reloop2
+                        Else
+                            NumberOfErrors = 0
+                            Return ""
+                            Exit Function
+                        End If
+
+
                     Else
+
+                        Return sValue
                         NumberOfErrors = 0
-                        Return ""
-                        Exit Function
                     End If
 
+                Catch ex As Exception
+                    Return ""
+                End Try
 
-                Else
-
-                    Return sValue
-                    NumberOfErrors = 0
-                End If
             Else
                 Return "lines.ini is missing"
                 NumberOfErrors = 0
@@ -201,7 +216,7 @@ Reloop2:
     End Function
 
     Public Function SmartieInfo()
-        Return "Developer: Nikos Georgousis (limbo)" & vbNewLine & "Version: 1.1 "
+        Return "Developer: Nikos Georgousis (limbo)" & vbNewLine & "Version: 1.2 "
     End Function
 
 
